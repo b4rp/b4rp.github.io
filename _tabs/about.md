@@ -4,6 +4,13 @@ icon: fas fa-info-circle
 order: 4
 ---
 
+<iframe
+  src="{{ '/assets/ascii-knight.html' | relative_url }}"
+  title="ASCII Knight"
+  loading="lazy"
+  style="width:100%;height:360px;border:0;border-radius:8px;display:block;margin-bottom:1.5rem;background:#141518;">
+</iframe>
+
 Hola, soy **b4rp**. Me dedico a la **seguridad ofensiva** con foco en **Red Team**.
 
 Me gusta romper cosas para entender cómo funcionan: aplicaciones web, binarios, entornos de Active Directory y cualquier sistema que esconda una flag. Este blog es donde documento lo que aprendo: writeups de máquinas retiradas, técnicas y notas de Red Team.
