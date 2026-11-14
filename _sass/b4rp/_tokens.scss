@@ -23,6 +23,7 @@
   --b4-warn-fg: #cfaab8;
   --b4-tip-bg: #141022;
   --b4-code-meta: #8a8a93;
+  --b4-code-text: #e4e4e7;
   --b4-mono: 'JetBrains Mono', monospace;
   --b4-sans: 'Space Grotesk', sans-serif;
 
@@ -120,10 +121,10 @@
   /* Código */
   --language-border-color: var(--b4-line);
   --highlight-bg-color: var(--b4-code-bg);
-  --highlighter-rouge-color: var(--b4-inline-fg);
+  --highlighter-rouge-color: var(--b4-code-text);
   --highlight-lineno-color: var(--b4-code-meta);
   --inline-code-bg: var(--b4-inline-bg);
-  --code-color: var(--b4-inline-fg);
+  --code-color: var(--b4-code-text);
   --code-header-text-color: var(--b4-code-meta);
   --code-header-muted-color: var(--b4-line);
   --code-header-icon-color: var(--b4-code-meta);
