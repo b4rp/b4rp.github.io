@@ -1,0 +1,284 @@
+/* Página del post: encabezado, texto, código, sintaxis, prompts, tablas y panel derecho. */
+
+/* Encabezado */
+article header {
+  h1 {
+    font-family: var(--b4-sans);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--b4-title);
+  }
+
+  .post-meta {
+    font-family: var(--b4-mono);
+    font-size: 0.75rem;
+    color: var(--b4-muted) !important;
+  }
+}
+
+.preview-img,
+.preview-img img {
+  border: 1px solid var(--b4-line);
+  border-radius: 0 !important;
+}
+
+/* Texto */
+.content {
+  > p,
+  > ul,
+  > ol {
+    color: var(--b4-para);
+  }
+
+  > h2,
+  > h3 {
+    font-family: var(--b4-sans);
+    font-weight: 600;
+    color: var(--b4-title);
+  }
+
+  > h2::before {
+    content: "# ";
+    color: var(--b4-accent);
+  }
+
+  > h3::before {
+    content: "## ";
+    color: var(--b4-accent);
+    opacity: 0.6;
+  }
+
+  a:not(.img-link):not(.anchor) {
+    color: var(--b4-accent);
+    border-bottom: 0;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+}
+
+code,
+pre,
+kbd,
+.highlight,
+.code-header {
+  font-family: var(--b4-mono);
+}
+
+code.highlighter-rouge {
+  color: var(--b4-inline-fg);
+  background-color: var(--b4-inline-bg);
+}
+
+/* Bloques de código */
+div[class^='language-'],
+.content > div[class^='language-'] {
+  border-radius: 0;
+  background-color: var(--b4-code-bg);
+  box-shadow:
+    inset 2px 0 0 var(--b4-accent),
+    0 0 0 1px var(--b4-line),
+    -4px 0 14px -6px rgba(199, 125, 255, 0.5);
+
+  .highlight {
+    background-color: transparent;
+    overflow-x: auto;
+  }
+
+  .code-header {
+    background: transparent;
+
+    &::before {
+      display: none;
+    }
+
+    span {
+      margin-left: 0 !important;
+    }
+  }
+}
+
+.code-header {
+  font-size: 0.7rem;
+  color: var(--b4-muted);
+
+  span i {
+    display: none;
+  }
+
+  button {
+    color: var(--b4-muted);
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--b4-accent);
+    }
+  }
+}
+
+/* Resaltado de sintaxis (paleta violeta) */
+:root[data-bs-theme='dark'] .highlight {
+  &,
+  .w,
+  .n,
+  .na,
+  .nt,
+  .nv,
+  .vc,
+  .vg,
+  .vi,
+  .vm,
+  .ni,
+  .ne,
+  .nl,
+  .nd,
+  .py,
+  .o,
+  .ow,
+  .p,
+  .err {
+    color: #dcd6ee;
+    background-color: transparent;
+  }
+
+  .k,
+  .kd,
+  .kn,
+  .kp,
+  .kr,
+  .kt,
+  .kv {
+    color: #c77dff;
+  }
+
+  .s,
+  .sa,
+  .sb,
+  .sc,
+  .dl,
+  .sd,
+  .s2,
+  .se,
+  .sh,
+  .si,
+  .sx,
+  .sr,
+  .s1,
+  .ss {
+    color: #e2c4ff;
+  }
+
+  .m,
+  .mb,
+  .mf,
+  .mh,
+  .mi,
+  .il,
+  .mo,
+  .mx,
+  .kc,
+  .no {
+    color: #f0a6ff;
+  }
+
+  .c,
+  .ch,
+  .cm,
+  .c1,
+  .cs,
+  .cp,
+  .cpf {
+    color: #6e6888;
+    font-style: italic;
+  }
+
+  .nf,
+  .fm,
+  .nc,
+  .nn,
+  .nb,
+  .bp {
+    color: #ffffff;
+  }
+
+  .gp {
+    color: #c77dff;
+  }
+}
+
+/* Prompts */
+blockquote[class^='prompt-'],
+.content > blockquote[class^='prompt-'] {
+  border-radius: 0;
+  border-left: 2px solid var(--b4-accent);
+  color: var(--b4-para);
+}
+
+blockquote.prompt-warning,
+blockquote.prompt-danger,
+.content > blockquote.prompt-warning,
+.content > blockquote.prompt-danger {
+  border-left-color: var(--b4-warn);
+  color: var(--b4-warn-fg);
+}
+
+/* Tablas */
+.table-wrapper {
+  overflow-x: auto;
+
+  > table {
+    thead th {
+      font-family: var(--b4-mono);
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: var(--b4-muted);
+    }
+
+    th,
+    td {
+      border-color: var(--b4-line);
+    }
+  }
+}
+
+/* Panel derecho y tags del post */
+#panel-wrapper .panel-heading {
+  font-family: var(--b4-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--b4-muted);
+}
+
+#panel-wrapper .post-tag,
+.post-tags .post-tag {
+  border: 0 !important;
+  border-radius: 0;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 0.6rem 0 0;
+  font-family: var(--b4-mono);
+  font-size: 0.75rem;
+  color: var(--b4-tag) !important;
+
+  &::before {
+    content: "#";
+    color: var(--b4-accent);
+  }
+
+  &:hover {
+    color: var(--b4-active) !important;
+  }
+}
+
+#toc-wrapper {
+  font-family: var(--b4-mono);
+  font-size: 0.8rem;
+
+  .is-active-link {
+    color: var(--b4-accent) !important;
+  }
+}

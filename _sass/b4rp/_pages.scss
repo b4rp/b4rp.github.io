@@ -1,0 +1,84 @@
+/* Archivo, categorías, tags, paginador y footer. */
+
+#archives {
+  .year {
+    font-family: var(--b4-mono);
+    color: var(--b4-accent);
+  }
+
+  .date {
+    font-family: var(--b4-mono) !important;
+    color: var(--b4-muted);
+  }
+}
+
+#categories,
+.categories {
+  .card {
+    border-radius: 0;
+    border-color: var(--b4-line);
+    background: transparent;
+  }
+
+  .card-header {
+    background: transparent;
+    border-color: var(--b4-line);
+  }
+
+  .text-muted {
+    font-family: var(--b4-mono);
+    font-size: 0.75rem;
+  }
+}
+
+#tags .tag {
+  font-family: var(--b4-mono) !important;
+  border-radius: 0;
+  border-color: var(--b4-line);
+  box-shadow: none;
+  color: var(--b4-tag);
+
+  span {
+    color: var(--b4-muted);
+  }
+
+  &:hover {
+    color: var(--b4-active);
+    background: rgba(199, 125, 255, 0.06);
+  }
+}
+
+.pagination {
+  font-family: var(--b4-mono);
+
+  .page-item {
+    .page-link {
+      border-radius: 0;
+      color: var(--b4-muted);
+    }
+
+    &.active .page-link {
+      color: var(--b4-accent);
+      background-color: transparent;
+    }
+
+    &:not(.active) .page-link:hover {
+      color: var(--b4-active);
+      box-shadow: none;
+    }
+  }
+}
+
+footer {
+  font-family: var(--b4-mono);
+  font-size: 0.7rem;
+  color: var(--b4-muted);
+
+  a {
+    color: var(--b4-muted);
+
+    &:hover {
+      color: var(--b4-accent);
+    }
+  }
+}
