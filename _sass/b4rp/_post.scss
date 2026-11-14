@@ -16,6 +16,12 @@ article header {
   }
 }
 
+h1.dynamic-title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--b4-title);
+}
+
 .preview-img,
 .preview-img img {
   border: 1px solid var(--b4-line);
@@ -90,6 +96,7 @@ div[class^='language-'],
 
   .code-header {
     background: transparent;
+    padding-left: 1rem;
 
     &::before {
       display: none;

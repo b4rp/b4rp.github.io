@@ -8,7 +8,7 @@ order: 4
   src="{{ '/assets/ascii-knight.html' | relative_url }}"
   title="ASCII Knight"
   loading="lazy"
-  style="width:100%;height:360px;border:0;border-radius:8px;display:block;margin-bottom:1.5rem;background:#141518;">
+  style="width:100%;height:360px;border:1px solid #231e33;border-radius:0;display:block;margin-bottom:1.5rem;background:#0d0b14;">
 </iframe>
 
 Hola, soy **b4rp**. Me dedico a la **seguridad ofensiva** con foco en **Red Team**.
