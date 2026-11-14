@@ -99,18 +99,18 @@ div[class^='language-'],
 
 .code-header {
   font-size: 0.7rem;
-  color: var(--b4-muted);
+  color: var(--b4-code-meta);
 
   span i {
     display: none;
   }
 
   button {
-    color: var(--b4-muted);
+    color: var(--b4-code-meta);
     transition: color 0.2s;
 
     &:hover {
-      color: var(--b4-accent);
+      color: #ffffff;
     }
   }
 }
