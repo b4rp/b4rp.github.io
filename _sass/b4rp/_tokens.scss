@@ -1,0 +1,131 @@
+/* Paleta "Violeta con brillo sutil" y remapeo de las variables de Chirpy (modo oscuro). */
+
+:root[data-bs-theme='dark'] {
+  /* Tokens propios */
+  --b4-bg: #0d0b14;
+  --b4-line: #231e33;
+  --b4-input-line: #2e2842;
+  --b4-code-bg: #110e1b;
+  --b4-text: #d4d0e2;
+  --b4-para: #b5b0c8;
+  --b4-excerpt: #8e88a6;
+  --b4-muted: #6e6888;
+  --b4-title: #ffffff;
+  --b4-accent: #c77dff;
+  --b4-glow: rgba(199, 125, 255, 0.6);
+  --b4-glow-soft: rgba(199, 125, 255, 0.5);
+  --b4-active: #e9d5ff;
+  --b4-inline-fg: #e2c4ff;
+  --b4-inline-bg: #1a1528;
+  --b4-tag: #a990d6;
+  --b4-warn: #ff3b3b;
+  --b4-warn-bg: #170d14;
+  --b4-warn-fg: #cfaab8;
+  --b4-tip-bg: #141022;
+  --b4-mono: 'JetBrains Mono', monospace;
+  --b4-sans: 'Space Grotesk', sans-serif;
+
+  /* Framework */
+  --main-bg: var(--b4-bg);
+  --mask-bg: var(--b4-inline-bg);
+  --main-border-color: var(--b4-line);
+
+  /* Comunes */
+  --text-color: var(--b4-text);
+  --text-muted-color: var(--b4-muted);
+  --text-muted-highlight-color: var(--b4-para);
+  --heading-color: var(--b4-title);
+  --label-color: var(--b4-excerpt);
+  --blockquote-border-color: var(--b4-line);
+  --blockquote-text-color: var(--b4-excerpt);
+  --link-color: var(--b4-accent);
+  --link-underline-color: rgba(199, 125, 255, 0.4);
+  --button-bg: var(--b4-bg);
+  --btn-border-color: var(--b4-line);
+  --btn-backtotop-border-color: var(--b4-line);
+  --card-header-bg: var(--b4-code-bg);
+  --checkbox-color: var(--b4-muted);
+  --checkbox-checked-color: var(--b4-accent);
+  --img-bg: radial-gradient(circle, #15111f 0%, var(--b4-bg) 100%);
+  --menu-bg: var(--b4-code-bg);
+  --menu-border-color: var(--b4-line);
+  --menu-active-color: var(--b4-active);
+  --menu-highlight-bg: rgba(199, 125, 255, 0.08);
+
+  /* Sidebar */
+  --site-title-color: var(--b4-title);
+  --site-subtitle-color: var(--b4-muted);
+  --sidebar-bg: var(--b4-bg);
+  --sidebar-border-color: var(--b4-line);
+  --sidebar-muted-color: var(--b4-muted);
+  --sidebar-active-color: var(--b4-active);
+  --sidebar-hover-bg: transparent;
+  --sidebar-btn-bg: var(--b4-code-bg);
+  --sidebar-btn-color: var(--b4-muted);
+  --avatar-border-color: var(--b4-accent);
+
+  /* Topbar */
+  --topbar-bg: rgba(13, 11, 20, 0.85);
+  --topbar-text-color: var(--b4-muted);
+  --search-border-color: var(--b4-input-line);
+  --search-icon-color: var(--b4-muted);
+  --input-focus-border-color: var(--b4-accent);
+
+  /* Inicio */
+  --post-list-text-color: var(--b4-excerpt);
+  --btn-patinator-text-color: var(--b4-muted);
+  --btn-paginator-hover-color: rgba(199, 125, 255, 0.08);
+
+  /* Posts */
+  --toc-highlight: var(--b4-accent);
+  --toc-popup-border-color: var(--b4-line);
+  --tag-hover: rgba(199, 125, 255, 0.1);
+  --tb-odd-bg: var(--b4-bg);
+  --tb-even-bg: var(--b4-bg);
+  --tb-border-color: var(--b4-line);
+  --footnote-target-bg: rgba(199, 125, 255, 0.25);
+  --btn-share-color: var(--b4-muted);
+  --btn-share-hover-color: var(--b4-accent);
+  --card-bg: var(--b4-bg);
+  --card-hover-bg: rgba(199, 125, 255, 0.05);
+  --card-shadow: none;
+  --kbd-wrap-color: var(--b4-line);
+  --kbd-text-color: var(--b4-inline-fg);
+  --kbd-bg-color: var(--b4-inline-bg);
+
+  /* Prompts */
+  --prompt-text-color: var(--b4-para);
+  --prompt-tip-bg: var(--b4-tip-bg);
+  --prompt-tip-icon-color: var(--b4-accent);
+  --prompt-info-bg: var(--b4-tip-bg);
+  --prompt-info-icon-color: var(--b4-accent);
+  --prompt-warning-bg: var(--b4-warn-bg);
+  --prompt-warning-icon-color: var(--b4-warn);
+  --prompt-danger-bg: var(--b4-warn-bg);
+  --prompt-danger-icon-color: var(--b4-warn);
+
+  /* Tags, categorías y archivo */
+  --tag-border: var(--b4-line);
+  --tag-shadow: transparent;
+  --dash-color: var(--b4-line);
+  --search-tag-bg: var(--b4-inline-bg);
+  --categories-border: var(--b4-line);
+  --categories-hover-bg: rgba(199, 125, 255, 0.06);
+  --categories-icon-hover-color: var(--b4-accent);
+  --timeline-node-bg: var(--b4-accent);
+  --timeline-color: var(--b4-line);
+  --timeline-year-dot-color: var(--b4-line);
+
+  /* Código */
+  --language-border-color: var(--b4-line);
+  --highlight-bg-color: var(--b4-code-bg);
+  --highlighter-rouge-color: var(--b4-inline-fg);
+  --highlight-lineno-color: var(--b4-muted);
+  --inline-code-bg: var(--b4-inline-bg);
+  --code-color: var(--b4-inline-fg);
+  --code-header-text-color: var(--b4-muted);
+  --code-header-muted-color: var(--b4-line);
+  --code-header-icon-color: var(--b4-muted);
+  --clipboard-checked-color: var(--b4-accent);
+  --filepath-text-color: var(--b4-inline-fg);
+}

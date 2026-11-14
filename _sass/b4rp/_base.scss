@@ -1,0 +1,47 @@
+/* Tipografía base, selección y scrollbar. */
+
+body {
+  font-family: var(--b4-sans);
+  color: var(--b4-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--b4-sans);
+  color: var(--b4-title);
+}
+
+kbd {
+  font-family: var(--b4-mono);
+}
+
+::selection {
+  background: rgba(199, 125, 255, 0.3);
+  color: #ffffff;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--b4-line) var(--b4-bg);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--b4-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--b4-line);
+
+  &:hover {
+    background: var(--b4-accent);
+  }
+}
