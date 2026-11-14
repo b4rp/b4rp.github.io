@@ -1,0 +1,138 @@
+/* Lista del inicio: filas numeradas con líneas finas, tags y miniatura a color. */
+
+#post-list {
+  .card-wrapper {
+    margin-bottom: 0;
+    border-top: 1px solid var(--b4-line);
+    border-radius: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid var(--b4-line);
+    }
+  }
+
+  .post-preview.b4rp-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 14px 10px;
+    color: inherit;
+    text-decoration: none;
+    transition: background 0.2s, box-shadow 0.2s;
+
+    &:hover {
+      background: rgba(199, 125, 255, 0.05);
+      box-shadow: inset 2px 0 0 var(--b4-accent);
+    }
+  }
+
+  .post-num {
+    flex: 0 0 auto;
+    min-width: 2ch;
+    padding-top: 4px;
+    font-family: var(--b4-mono);
+    font-size: 0.75rem;
+    color: var(--b4-accent);
+    text-shadow: 0 0 8px var(--b4-glow-soft);
+  }
+
+  .card .card-body.post-body {
+    flex: 1 1 auto;
+    min-width: 0;
+    height: auto;
+    padding: 0;
+
+    .card-title {
+      margin: 0 0 4px;
+      font-family: var(--b4-sans);
+      font-weight: 700;
+      font-size: 1.3rem;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--b4-title) !important;
+    }
+
+    .card-text.content {
+      margin: 0 0 8px;
+      max-width: 60ch;
+      color: var(--b4-excerpt) !important;
+
+      p {
+        font-size: 0.85rem;
+      }
+    }
+
+    .post-meta {
+      font-family: var(--b4-mono);
+      font-size: 0.7rem;
+      color: var(--b4-muted) !important;
+
+      .pin {
+        color: var(--b4-accent);
+
+        i {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  .post-tags {
+    margin-top: 2px;
+    font-family: var(--b4-mono);
+    font-size: 0.7rem;
+
+    span {
+      margin-right: 8px;
+      color: var(--b4-tag);
+    }
+
+    span::before {
+      content: "#";
+      color: var(--b4-accent);
+    }
+  }
+
+  .post-thumb {
+    flex: 0 0 92px;
+    width: 92px;
+    height: 92px;
+    overflow: hidden;
+    border: 1px solid var(--b4-line);
+    background: #15111f;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0;
+    }
+  }
+
+  .post-thumb-empty {
+    background: linear-gradient(135deg, #2a1d44, #0f0c18);
+  }
+}
+
+@media (max-width: 767.98px) {
+  #post-list {
+    .post-preview.b4rp-row {
+      gap: 14px;
+      padding: 12px 4px;
+    }
+
+    .card .card-body.post-body .card-title {
+      font-size: 1.1rem;
+    }
+
+    .post-thumb {
+      flex: 0 0 72px;
+      width: 72px;
+      height: 72px;
+    }
+  }
+}

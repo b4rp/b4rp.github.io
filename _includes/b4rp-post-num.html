@@ -1,0 +1,6 @@
+{%- comment -%}
+  Número correlativo del post en la lista del inicio, con dos dígitos.
+  Uso: {% include b4rp-post-num.html page=paginator.page per_page=paginator.per_page index=forloop.index %}
+{%- endcomment -%}
+{%- assign b4rp_num = include.page | minus: 1 | times: include.per_page | plus: include.index -%}
+{%- if b4rp_num < 10 -%}0{%- endif -%}{{ b4rp_num }}
