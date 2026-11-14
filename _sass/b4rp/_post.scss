@@ -115,7 +115,7 @@ div[class^='language-'],
   }
 }
 
-/* Resaltado de sintaxis (paleta violeta) */
+/* Resaltado de sintaxis: texto neutro (sin morado); el violeta queda solo en el borde del bloque */
 :root[data-bs-theme='dark'] .highlight {
   &,
   .w,
@@ -136,7 +136,7 @@ div[class^='language-'],
   .ow,
   .p,
   .err {
-    color: #dcd6ee;
+    color: #e4e4e7;
     background-color: transparent;
   }
 
@@ -147,7 +147,8 @@ div[class^='language-'],
   .kr,
   .kt,
   .kv {
-    color: #c77dff;
+    color: #ffffff;
+    font-weight: 600;
   }
 
   .s,
@@ -164,7 +165,7 @@ div[class^='language-'],
   .sr,
   .s1,
   .ss {
-    color: #e2c4ff;
+    color: #b9b9c2;
   }
 
   .m,
@@ -177,7 +178,7 @@ div[class^='language-'],
   .mx,
   .kc,
   .no {
-    color: #f0a6ff;
+    color: #d4d4d8;
   }
 
   .c,
@@ -187,7 +188,7 @@ div[class^='language-'],
   .cs,
   .cp,
   .cpf {
-    color: #6e6888;
+    color: #71717a;
     font-style: italic;
   }
 
@@ -201,7 +202,7 @@ div[class^='language-'],
   }
 
   .gp {
-    color: #c77dff;
+    color: #8b8b94;
   }
 }
 
