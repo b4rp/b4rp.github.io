@@ -43,17 +43,6 @@ h1.dynamic-title {
     color: var(--b4-title);
   }
 
-  > h2::before {
-    content: "# ";
-    color: var(--b4-accent);
-  }
-
-  > h3::before {
-    content: "## ";
-    color: var(--b4-accent);
-    opacity: 0.6;
-  }
-
   a:not(.img-link):not(.anchor) {
     color: var(--b4-accent);
     border-bottom: 0;
