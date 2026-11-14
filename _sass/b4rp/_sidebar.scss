@@ -1,0 +1,133 @@
+/* Sidebar "A · Limpio" y topbar. */
+
+#sidebar {
+  background: linear-gradient(180deg, rgba(199, 125, 255, 0.05), transparent 40%), var(--b4-bg);
+  border-right: 1px solid var(--b4-line);
+
+  #avatar {
+    box-shadow: 0 0 0 2px var(--b4-bg), 0 0 0 3px var(--b4-accent);
+  }
+
+  .site-title {
+    font-family: var(--b4-sans);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--b4-title);
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+
+  .site-subtitle {
+    font-style: normal !important;
+    font-size: 0.8rem;
+    color: var(--b4-muted);
+  }
+
+  ul li.nav-item {
+    opacity: 1;
+
+    a.nav-link {
+      font-family: var(--b4-mono);
+      font-weight: 400;
+      text-transform: lowercase;
+      color: var(--b4-muted);
+      background: transparent;
+      border-radius: 0;
+      transition: color 0.2s;
+
+      i {
+        display: none;
+      }
+
+      span {
+        font-size: 0.8rem;
+        letter-spacing: 0;
+      }
+
+      &:hover {
+        color: var(--b4-active);
+        background: transparent;
+      }
+    }
+
+    &.active .nav-link {
+      color: var(--b4-active);
+      background: transparent;
+      text-shadow: 0 0 10px var(--b4-glow);
+    }
+
+    &.active .nav-link::before {
+      content: "› ";
+      color: var(--b4-accent);
+      white-space: pre;
+    }
+  }
+
+  .sidebar-bottom {
+    > a {
+      color: var(--b4-muted);
+      background: transparent;
+      box-shadow: none !important;
+      transition: color 0.2s;
+
+      &:hover {
+        color: var(--b4-accent);
+        background: transparent;
+      }
+    }
+
+    .icon-border {
+      background-color: var(--b4-line);
+    }
+  }
+}
+
+#topbar-wrapper {
+  border-bottom: 1px solid var(--b4-line);
+
+  #breadcrumb {
+    font-family: var(--b4-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--b4-muted);
+
+    a {
+      color: var(--b4-muted);
+
+      &:hover {
+        color: var(--b4-accent);
+      }
+    }
+  }
+}
+
+#topbar-title {
+  font-family: var(--b4-mono);
+  color: var(--b4-title);
+}
+
+#search {
+  border: 0;
+  border-bottom: 1px solid var(--b4-input-line);
+  border-radius: 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &:focus-within {
+    border-bottom-color: var(--b4-accent);
+  }
+}
+
+#search-input {
+  font-family: var(--b4-mono);
+  font-size: 0.8rem;
+  color: var(--b4-text);
+
+  &::placeholder {
+    color: var(--b4-muted);
+  }
+}
